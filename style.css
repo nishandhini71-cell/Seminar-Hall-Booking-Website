@@ -1,0 +1,288 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #263238;
+    background-color: #f5f7fb;
+}
+
+header {
+    background-color: #102a43;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #57d9c5;
+}
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    color: #ffffff;
+    background:
+        linear-gradient(rgba(10, 30, 55, 0.75),
+                        rgba(10, 30, 55, 0.75)),
+        url("https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1600&q=85")
+        center/cover no-repeat;
+}
+
+.hero-content h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00a896;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #008577;
+    transform: translateY(-2px);
+}
+
+.halls,
+.booking,
+.contact {
+    padding: 65px 24px;
+}
+
+.halls h2,
+.booking h2,
+.contact h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 35px;
+}
+
+.hall-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.hall-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(16, 42, 67, 0.09);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hall-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(16, 42, 67, 0.15);
+}
+
+.hall-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.hall-info {
+    padding: 22px;
+}
+
+.hall-info h3 {
+    color: #102a43;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.hall-info p {
+    font-size: 14px;
+    color: #526477;
+    margin-bottom: 10px;
+}
+
+.hall-info .btn {
+    margin-top: 10px;
+}
+
+.booking {
+    background-color: #eaf1f8;
+}
+
+.booking-form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(16, 42, 67, 0.08);
+}
+
+.booking-form label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #263238;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    outline: 2px solid #00a896;
+    outline-offset: 1px;
+    border-color: #00a896;
+}
+
+.booking-form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 22px;
+}
+
+.contact {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.contact p {
+    margin-top: 10px;
+    color: #526477;
+}
+
+footer {
+    background-color: #102a43;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .hall-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hall-container {
+        grid-template-columns: 1fr;
+    }
+
+    .halls,
+    .booking,
+    .contact {
+        padding: 45px 16px;
+    }
+
+    .booking-form {
+        padding: 22px;
+    }
+
+    .halls h2,
+    .booking h2,
+    .contact h2 {
+        font-size: 27px;
+    }
+}
