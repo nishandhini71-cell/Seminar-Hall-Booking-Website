@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar Hall Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">HallBook</h2>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#halls">Our Halls</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Seminar Hall Booking System</h1>
+            <p>Find and reserve the perfect hall for your next event.</p>
+            <a href="#booking" class="btn">Book a Hall</a>
+        </div>
+    </section>
+
+    <!-- Hall Listings -->
+    <section class="halls" id="halls">
+        <h2>Our Seminar Halls</h2>
+        <p class="section-desc">Choose a hall that suits your event.</p>
+
+        <div class="hall-container">
+
+            <div class="hall-card">
+                <img
+                    src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80"
+                    alt="Main seminar hall">
+                <div class="hall-info">
+                    <h3>Main Seminar Hall</h3>
+                    <p>Capacity: 200 people</p>
+                    <p>Facilities: Projector, AC, Sound System</p>
+                    <a href="#booking" class="btn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="hall-card">
+                <img
+                    src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80"
+                    alt="Conference hall">
+                <div class="hall-info">
+                    <h3>Conference Hall</h3>
+                    <p>Capacity: 100 people</p>
+                    <p>Facilities: Projector, Wi-Fi, AC</p>
+                    <a href="#booking" class="btn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="hall-card">
+                <img
+                    src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80"
+                    alt="Small meeting hall">
+                <div class="hall-info">
+                    <h3>Mini Seminar Hall</h3>
+                    <p>Capacity: 50 people</p>
+                    <p>Facilities: Display Screen, Wi-Fi</p>
+                    <a href="#booking" class="btn">Book Now</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking" id="booking">
+        <h2>Book Your Seminar Hall</h2>
+        <p class="section-desc">Enter your event details below.</p>
+
+        <form class="booking-form" action="#" method="get">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label for="hall">Select Hall</label>
+            <select id="hall" name="hall" required>
+                <option value="">Choose a seminar hall</option>
+                <option value="Main Seminar Hall">Main Seminar Hall</option>
+                <option value="Conference Hall">Conference Hall</option>
+                <option value="Mini Seminar Hall">Mini Seminar Hall</option>
+            </select>
+
+            <label for="date">Booking Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time Slot</label>
+            <select id="time" name="time" required>
+                <option value="">Select a time slot</option>
+                <option value="09:00-12:00">9:00 AM - 12:00 PM</option>
+                <option value="12:00-15:00">12:00 PM - 3:00 PM</option>
+                <option value="15:00-18:00">3:00 PM - 6:00 PM</option>
+            </select>
+
+            <label for="attendees">Number of Attendees</label>
+            <input type="number" id="attendees" name="attendees"
+                   min="1" placeholder="Enter number of attendees" required>
+
+            <label for="purpose">Event Purpose</label>
+            <textarea id="purpose" name="purpose" rows="4"
+                      placeholder="Describe your event" required></textarea>
+
+            <button type="submit" class="btn submit-btn">
+                Submit Booking Request
+            </button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: hallbook@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Address: College Campus, Chennai, Tamil Nadu</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 HallBook. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
